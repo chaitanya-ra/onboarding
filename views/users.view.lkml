@@ -54,6 +54,7 @@ view: users {
   }
 
   dimension: email {
+    label: "email"
     type: string
     sql: ${TABLE}.email ;;
   }
