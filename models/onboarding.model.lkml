@@ -253,7 +253,12 @@ explore: testing_blob_type {}
 
 explore: test_space_in_column_name {}
 
-explore: users {}
+explore: users {
+  access_filter: {
+    field: users.state
+    user_attribute: onboarding_test
+  }
+}
 
 explore: user_data {
   join: users {
