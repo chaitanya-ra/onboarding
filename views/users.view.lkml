@@ -35,14 +35,26 @@ view: users {
     sql: ${age} ;;  }
 
   dimension: city {
+    label: "city"
     type: string
     sql: ${TABLE}.city ;;
   }
 
   dimension: country {
+    label: "Country"
     type: string
     sql: ${TABLE}.country ;;
   }
+
+  dimension: flights {
+    label: "flights"
+    type: string
+    sql: CASE
+         WHEN ${TABLE}.Country = 'USA' THEN '{{ _localization['domestic'] }}'
+         ELSE '{{ _localization['international'] }}'
+         END;;
+  }
+
 
   # Dates and timestamps can be represented in Looker using a dimension group of type: time.
   # Looker converts dates and timestamps to the specified timeframes within the dimension group.
