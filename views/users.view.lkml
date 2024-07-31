@@ -9,6 +9,7 @@ view: users {
   # You need to define a primary key in a view in order to join to other views.
 
   dimension: id {
+    label: "id"
     primary_key: yes
     type: number
     sql: ${TABLE}.id ;;
@@ -40,10 +41,9 @@ view: users {
 
   dimension: country {
     type: string
-    map_layer_name: countries
-    drill_fields: [state, city]
     sql: ${TABLE}.country ;;
   }
+
   # Dates and timestamps can be represented in Looker using a dimension group of type: time.
   # Looker converts dates and timestamps to the specified timeframes within the dimension group.
 
@@ -60,6 +60,7 @@ view: users {
   }
 
   dimension: first_name {
+    label: "name"
     type: string
     sql: ${TABLE}.first_name ;;
   }
