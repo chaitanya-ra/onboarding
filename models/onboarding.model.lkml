@@ -258,6 +258,7 @@ explore: users {
   }
 }
 
+
 explore: user_data {
   join: users {
     type: left_outer
