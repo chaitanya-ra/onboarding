@@ -257,11 +257,7 @@ explore: testing_blob_type {}
 explore: test_space_in_column_name {}
 
 explore: users {
-  required_access_grants: [sample]
-  access_filter: {
-    field: users.state
-    user_attribute: onboarding_test
-  }
+
 }
 
 explore: user_data {
